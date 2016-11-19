@@ -56,12 +56,12 @@ do{
 
         # if a hang start event
         if ($event_code -eq $eventlog_eventcode_hang_begin) {
-            $message = 'The ' + $hung_process + ' process has entered an unresponsive state.'
+            $message = $hung_process + 'entered an unresponsive state.'
         }
 
         # if a hang end event
         if ($event_code -eq $eventlog_eventcode_hang_end) {
-            $message = 'The ' + $hung_process + ' process has returned to a responsive state.'
+            $message = $hung_process + 'returned to a responsive state.'
         }
 
         # Remove the events now needed information has been extracted
